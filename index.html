@@ -22,6 +22,58 @@
 </head>
 
 <body>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="side-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="side-overlay" id="side-overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
+        <div class="side-menu__inner">
+            <p class="side-menu__eyebrow">Navigation</p>
+
+            <nav class="side-menu__nav">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#menu">Menu</a>
+                <a href="#featured-drink">Featured Drink</a>
+                <a href="#quality">Quality</a>
+            </nav>
+        </div>
+    </aside>
+    <div class="side-overlay" id="side-overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
+        <div class="side-menu__inner">
+            <p class="side-menu__eyebrow">Navigation</p>
+
+            <nav class="side-menu__nav">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#menu">Menu</a>
+                <a href="#featured-drink">Featured Drink</a>
+                <a href="#quality">Quality</a>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="side-overlay" id="side-overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
+        <div class="side-menu__inner">
+            <p class="side-menu__eyebrow">Navigation</p>
+
+            <nav class="side-menu__nav">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#menu">Menu</a>
+                <a href="#featured-drink">Featured Drink</a>
+                <a href="#quality">Quality</a>
+            </nav>
+        </div>
+    </aside>
     <svg width="0" height="0" style="position:absolute">
         <filter id="coffee-distort">
             <feTurbulence id="coffeeNoise" type="fractalNoise" baseFrequency="0.008 0.03" numOctaves="2" />
@@ -62,7 +114,7 @@
                             <circle cx="12" cy="10" r="2.5" fill="currentColor" />
                         </svg>
                     </span>
-                    <span class="hero__location-text">Reading, UK</span>
+                    <span class="hero__location-text">Reading,UK</span>
                 </div>
 
                 <div class="hero__particles"></div>
@@ -137,9 +189,9 @@
         </div>
     </section>
 
-    <section class="about-coffee">
+    <section class="about-coffee" id="about">
         <div class="about-coffee__bg">
-            <img src="./assets/coffee-bg.jpg" alt="Coffee background">
+            <img src="./assets/coffe11Main.png" alt="Coffee background">
         </div>
 
         <div class="about-coffee__overlay"></div>
@@ -168,7 +220,7 @@
             </div>
         </div>
     </section>
-    <section class="menu-board">
+    <section class="menu-board" id="menu">
         <div class="menu-board__inner">
             <div class="menu-board__heading">
                 <h2 class="menu-board__title">
@@ -233,7 +285,23 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section class="featured-drink">
+        <div class="featured-drink__inner">
+            <div class="featured-drink__media">
+                <img src="./assets/coffesMain.png" alt="Limited drink" class="featured-drink__image" />
+            </div>
+
+            <div class="featured-drink__content">
+                <p class="featured-drink__eyebrow">Limited</p>
+                <h2 class="featured-drink__title">CARAMEL MEMORIES</h2>
+                <p class="featured-drink__text">
+                    Topped with milk froth and accompanied with a caramel drizzle, this iced
+                    confection pairs the warm flavors of the Caramelita Crunch Crème with an icy chill.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
         <div class="contact-container">
 
             <div class="contact-heading">
@@ -292,7 +360,48 @@
             </div>
         </div>
     </section>
+    <footer class="site-footer">
+        <div class="site-footer__social-wrap">
+            <div class="site-footer__social-pill">
+                <a href="#" class="site-footer__social-link" aria-label="Facebook">f</a>
+                <a href="#" class="site-footer__social-link" aria-label="Twitter">t</a>
+                <a href="#" class="site-footer__social-link" aria-label="Instagram">i</a>
+                <a href="#" class="site-footer__social-link" aria-label="YouTube">▶</a>
+            </div>
+        </div>
 
+        <div class="site-footer__main">
+            <div class="site-footer__container">
+                <a href="#" class="site-footer__brand">Unicorn <span>Magic Brew</span></a>
+
+                <div class="site-footer__line"></div>
+
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <a href="#">About Us</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Gallery</a>
+                </nav>
+
+                <div class="site-footer__contact">
+                    <a href="tel:+3612345678" class="site-footer__contact-item">
+                        <span class="site-footer__icon">📞</span>
+                        <span>+36 1 234 5678</span>
+                    </a>
+
+                    <a href="mailto:hello@firepro.com" class="site-footer__contact-item">
+                        <span class="site-footer__icon">✉</span>
+                        <span>hello@firepro.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>Copyright © 2026 Divine Inborn Studio. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 

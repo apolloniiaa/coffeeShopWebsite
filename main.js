@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   setupContactForm();
+  setupSideMenu();
 });
 
 function animateCoffeeDistortion(noise, displace) {
@@ -126,6 +127,58 @@ function setupContactForm() {
     } finally {
       button.textContent = originalButtonText;
       button.classList.remove('is-loading');
+    }
+  });
+}
+
+function setupSideMenu() {
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('side-menu');
+  const overlay = document.getElementById('side-overlay');
+
+  if (!toggle || !menu || !overlay) return;
+
+  const links = menu.querySelectorAll('a');
+
+  function openMenu() {
+    toggle.classList.add('is-active');
+    menu.classList.add('is-active');
+    overlay.classList.add('is-active');
+    document.body.classList.add('menu-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+  }
+
+  function closeMenu() {
+    toggle.classList.remove('is-active');
+    menu.classList.remove('is-active');
+    overlay.classList.remove('is-active');
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu() {
+    if (menu.classList.contains('is-active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  toggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  links.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
     }
   });
 }
