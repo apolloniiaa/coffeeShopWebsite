@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unicorn Magic Brew</title>
+
+    <link rel="icon" href="./assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Playfair+Display&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+    <!-- SVG filter -->
+    <svg width="0" height="0" style="position:absolute">
+        <filter id="coffee-distort">
+            <feTurbulence id="coffeeNoise" type="fractalNoise" baseFrequency="0.008 0.03" numOctaves="2" />
+            <feDisplacementMap id="coffeeDisplace" in="SourceGraphic" scale="5" />
+        </filter>
+    </svg>
+
+    <main class="hero">
+        <div class="hero__page-bg"></div>
+        <div class="hero__inner">
+            <p class="hero__eyebrow">PREMIUM COFFEE EXPERIENCE</p>
+            <section class="hero__stage">
+                <h1 class="hero__title liquid-title" data-text="UNICORN MAGIC BREW">
+                    <span class="hero__title-spark"></span>
+                    <span>UNICORN MAGIC BREW</span>
+                </h1>
+
+                <div class="hero__visual">
+                    <div class="hero__steam"></div>
+                    <div class="hero__glow"></div>
+                    <div class="hero__shadow"></div>
+
+                    <img src="./assets/coffeMain.png" alt="coffee" class="hero__image" />
+                </div>
+            </section>
+
+            <section class="hero__info">
+                <p class="hero__text">
+                    Discover The Magic Of Local Coffee
+                </p>
+
+                <div class="hero__location">
+                    <span class="hero__location-icon">📍</span>
+                    <span class="hero__location-text">Reading, UK</span>
+                </div>
+
+                <div class="hero__particles"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ÚJ CARDS SZEKCIÓ -->
+    <section class="coffee-section">
+        <div class="coffee-container">
+            <div class="coffee-heading">
+                <p class="coffee-heading__top">WHAT'S HAPPEN HERE</p>
+                <h2 class="coffee-heading__title">WELCOME TO OUR COFFEE SHOP</h2>
+
+                <div class="coffee-heading__divider">
+                    <span></span>
+                    <span class="icon">☕</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="coffee-grid">
+                <article class="coffee-card">
+                    <div class="coffee-card__image">
+                        <img src="./assets/coffee-1.jpg" alt="Beautiful place" />
+                    </div>
+                    <div class="coffee-card__content">
+                        <h3 class="coffee-card__title">
+                            <span class="coffee-card__number">01.</span>
+                            BEAUTIFUL PLACE
+                        </h3>
+                        <p class="coffee-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="coffee-card">
+                    <div class="coffee-card__image">
+                        <img src="./assets/coffee-2.jpg" alt="Feel the coffee" />
+                    </div>
+                    <div class="coffee-card__content">
+                        <h3 class="coffee-card__title">
+                            <span class="coffee-card__number">02.</span>
+                            FEEL THE COFFEE
+                        </h3>
+                        <p class="coffee-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="coffee-card">
+                    <div class="coffee-card__image">
+                        <img src="./assets/coffee-3.jpg" alt="Full taste" />
+                    </div>
+                    <div class="coffee-card__content">
+                        <h3 class="coffee-card__title">
+                            <span class="coffee-card__number">03.</span>
+                            FULL TASTE
+                        </h3>
+                        <p class="coffee-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
