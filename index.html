@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Playfair+Display&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
 
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
 </head>
 
 <body>
-    <!-- SVG filter -->
     <svg width="0" height="0" style="position:absolute">
         <filter id="coffee-distort">
             <feTurbulence id="coffeeNoise" type="fractalNoise" baseFrequency="0.008 0.03" numOctaves="2" />
@@ -31,6 +31,7 @@
         <div class="hero__page-bg"></div>
         <div class="hero__inner">
             <p class="hero__eyebrow">PREMIUM COFFEE EXPERIENCE</p>
+
             <section class="hero__stage">
                 <h1 class="hero__title liquid-title" data-text="UNICORN MAGIC BREW">
                     <span class="hero__title-spark"></span>
@@ -52,7 +53,13 @@
                 </p>
 
                 <div class="hero__location">
-                    <span class="hero__location-icon">📍</span>
+                    <span class="hero__location-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 21s7-5.33 7-11a7 7 0 1 0-14 0c0 5.67 7 11 7 11Z" stroke="currentColor"
+                                stroke-width="1.8" />
+                            <circle cx="12" cy="10" r="2.5" fill="currentColor" />
+                        </svg>
+                    </span>
                     <span class="hero__location-text">Reading, UK</span>
                 </div>
 
@@ -61,7 +68,8 @@
         </div>
     </main>
 
-    <!-- ÚJ CARDS SZEKCIÓ -->
+
+
     <section class="coffee-section">
         <div class="coffee-container">
             <div class="coffee-heading">
@@ -127,6 +135,37 @@
         </div>
     </section>
 
+    <section class="about-coffee">
+        <div class="about-coffee__bg">
+            <img src="./assets/coffee-bg.jpg" alt="Coffee background">
+        </div>
+
+        <div class="about-coffee__overlay"></div>
+
+        <div class="about-coffee__content">
+            <div class="about-coffee__left">
+                <div class="about-coffee__avatar">
+                    <img src="./assets/person.jpg" alt="Person">
+                </div>
+            </div>
+
+            <div class="about-coffee__right">
+                <h2 class="about-coffee__title">About Us</h2>
+
+                <p class="about-coffee__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non augue urna.
+                    Cras sollicitudin condimentum justo at varius. Sed sit amet tellus ut quam
+                    tempor suscipit.
+                </p>
+
+                <p class="about-coffee__text">
+                    Curabitur ut dolor est. Praesent sed sagittis justo. Curabitur eget lacus eu
+                    nisl tempus efficitur. Mauris quis est nec leo sagittis porta quis in purus.
+                    Proin vitae odio a nulla bibendum lobortis.
+                </p>
+            </div>
+        </div>
+    </section>
     <script src="./main.js"></script>
 </body>
 

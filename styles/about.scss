@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #140f06;
+}
+
+.about-coffee {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(40, 20, 10, 0.4);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    color: #fff;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin: 0 0 16px;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* felső hullám */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #d8b08a;
+    border-bottom-left-radius: 60% 100%;
+    border-bottom-right-radius: 40% 100%;
+    z-index: 4;
+  }
+
+  /* alsó hullám */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #d8b08a;
+    border-top-left-radius: 40% 100%;
+    border-top-right-radius: 60% 100%;
+    z-index: 4;
+  }
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .about-coffee {
+    &__content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .about-coffee {
+    padding: 60px 16px;
+
+    &__avatar {
+      width: 140px;
+      height: 140px;
+    }
+
+    &__title {
+      font-size: 1.7rem;
+    }
+
+    &__text {
+      font-size: 0.95rem;
+    }
+  }
+}
