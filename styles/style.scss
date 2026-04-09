@@ -1,5 +1,9 @@
 @import './cards';
 @import './about';
+@import './contact';
+@import './map';
+@import './menu';
+
 :root {
   --bg-1: #180a07;
   --bg-2: #1c0e08;
@@ -29,7 +33,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #080403;
 }
 
 body {

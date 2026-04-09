@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const noise = document.getElementById('coffeeNoise');
   const displace = document.getElementById('coffeeDisplace');
   const spark = document.querySelector('.hero__title-spark');
+  const container = document.querySelector('.hero__particles');
 
   if (title && noise && displace) {
     animateCoffeeDistortion(noise, displace);
@@ -11,6 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
   if (title && spark) {
     addPointerSpark(title, spark);
   }
+
+  if (container) {
+    setInterval(() => createParticle(container), 180);
+  }
+
+  setupContactForm();
 });
 
 function animateCoffeeDistortion(noise, displace) {
@@ -57,9 +64,8 @@ function addPointerSpark(title, spark) {
   title.addEventListener('pointermove', moveSpark);
   title.addEventListener('pointerleave', resetSpark);
 }
-const container = document.querySelector('.hero__particles');
 
-function createParticle() {
+function createParticle(container) {
   const p = document.createElement('span');
   p.className = 'hero__particle';
 
@@ -69,11 +75,11 @@ function createParticle() {
   const size = Math.random() * 3 + 2;
   const duration = Math.random() * 7 + 7;
 
-  p.style.left = x + 'px';
-  p.style.top = y + 'px';
-  p.style.width = size + 'px';
-  p.style.height = size + 'px';
-  p.style.animationDuration = duration + 's';
+  p.style.left = `${x}px`;
+  p.style.top = `${y}px`;
+  p.style.width = `${size}px`;
+  p.style.height = `${size}px`;
+  p.style.animationDuration = `${duration}s`;
 
   container.appendChild(p);
 
@@ -82,4 +88,44 @@ function createParticle() {
   }, duration * 1000);
 }
 
-setInterval(createParticle, 180);
+function setupContactForm() {
+  const form = document.getElementById('contact-form');
+  const button = document.getElementById('contact-btn');
+  const messageBox = document.getElementById('contact-message');
+
+  if (!form || !button || !messageBox) return;
+  if (typeof emailjs === 'undefined') {
+    console.warn('EmailJS nincs betöltve.');
+    return;
+  }
+
+  emailjs.init({
+    publicKey: 'YOUR_PUBLIC_KEY',
+  });
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    messageBox.textContent = '';
+    messageBox.classList.remove('is-success', 'is-error');
+
+    const originalButtonText = button.textContent;
+    button.textContent = 'SENDING...';
+    button.classList.add('is-loading');
+
+    try {
+      await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
+
+      messageBox.textContent = 'Your message has been sent successfully.';
+      messageBox.classList.add('is-success');
+      form.reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      messageBox.textContent = 'Something went wrong. Please try again.';
+      messageBox.classList.add('is-error');
+    } finally {
+      button.textContent = originalButtonText;
+      button.classList.remove('is-loading');
+    }
+  });
+}

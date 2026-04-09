@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/about.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./main.js"></script>
 </head>
 
 <body>
@@ -166,7 +168,132 @@
             </div>
         </div>
     </section>
-    <script src="./main.js"></script>
+    <section class="menu-board">
+        <div class="menu-board__inner">
+            <div class="menu-board__heading">
+                <h2 class="menu-board__title">
+                    <span>Menu</span>
+                    <span>coffee</span>
+                </h2>
+            </div>
+
+            <div class="menu-board__grid">
+                <article class="menu-block menu-block--image">
+                    <div class="menu-blob">
+                        <img src="./assets/coffee-3.jpg" alt="Hot coffee" />
+                    </div>
+                </article>
+
+                <article class="menu-block menu-block--list">
+                    <h3 class="menu-block__category">HOT</h3>
+
+                    <ul class="menu-list">
+                        <li><span>Cappuccino</span><span>₹200</span></li>
+                        <li><span>Latte</span><span>₹230</span></li>
+                        <li><span>Macchiato</span><span>₹250</span></li>
+                        <li><span>Americano</span><span>₹250</span></li>
+                        <li><span>Irish Coffee</span><span>₹350</span></li>
+                    </ul>
+                </article>
+
+                <article class="menu-block menu-block--list">
+                    <h3 class="menu-block__category">COLD</h3>
+
+                    <ul class="menu-list">
+                        <li><span>Cold Brew</span><span>₹300</span></li>
+                        <li><span>Frappé</span><span>₹350</span></li>
+                        <li><span>Café Glacé</span><span>₹240</span></li>
+                        <li><span>Affogato</span><span>₹350</span></li>
+                    </ul>
+                </article>
+
+                <article class="menu-block menu-block--image menu-block--image-right">
+                    <div class="menu-blob menu-blob--alt">
+                        <img src="./assets/coffee-2.jpg" alt="Cold coffee" />
+                    </div>
+                </article>
+
+                <article class="menu-block menu-block--image">
+                    <div class="menu-blob">
+                        <img src="./assets/coffee-1.jpg" alt="Iced coffee" />
+                    </div>
+                </article>
+
+                <article class="menu-block menu-block--list">
+                    <h3 class="menu-block__category">ICED</h3>
+
+                    <ul class="menu-list">
+                        <li><span>Iced Americano</span><span>₹360</span></li>
+                        <li><span>Iced Latte</span><span>₹250</span></li>
+                        <li><span>Iced Cappuccino</span><span>₹350</span></li>
+                        <li><span>Iced Mocha</span><span>₹280</span></li>
+                        <li><span>Iced Flat White</span><span>₹210</span></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <div class="contact-heading">
+                <p class="contact-heading__top">HAVE A QUESTION?</p>
+                <h2 class="contact-heading__title">REACH US</h2>
+
+                <div class="contact-heading__divider">
+                    <span></span>
+                    <span class="icon">☕</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+
+                <div class="contact-row">
+                    <input type="text" name="first_name" placeholder="First Name*" required />
+
+                    <input type="text" name="last_name" placeholder="Last Name*" required />
+                </div>
+
+                <input type="email" name="email" placeholder="Your Email*" required />
+
+                <textarea name="message" placeholder="Comment or Message*" rows="6" required></textarea>
+
+                <button type="submit" class="contact-btn" id="contact-btn">
+                    SEND MESSAGE
+                </button>
+
+                <!-- visszajelzés -->
+                <p class="contact-message" id="contact-message"></p>
+
+            </form>
+
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-heading">
+                <p class="map-heading__top">FIND US HERE</p>
+                <h2 class="map-heading__title">OUR LOCATION</h2>
+
+                <div class="map-heading__divider">
+                    <span></span>
+                    <span class="icon">📍</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="map-card">
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps?q=Reading,England&z=13&output=embed" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Reading, England">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 
 </html>
