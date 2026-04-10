@@ -1,47 +1,56 @@
 .coffee-section {
-  padding: 70px 20px 80px;
-  background: #ffffff;
+  padding: 110px 32px 120px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(
+      circle at top center,
+      rgba(216, 176, 138, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f8f3ee 100%);
 }
 
 .coffee-container {
   width: 100%;
-  max-width: 980px;
+  max-width: 1380px;
   margin: 0 auto;
 }
 
 .coffee-heading {
   text-align: center;
-  margin-bottom: 42px;
+  margin-bottom: 64px;
 
   &__top {
-    margin: 0 0 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    margin: 0 0 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #4c1504;
     text-transform: uppercase;
   }
 
   &__title {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 3.5vw, 4.3rem);
     font-weight: 800;
     letter-spacing: 2px;
     color: #4c1504;
     text-transform: uppercase;
+    line-height: 1.08;
   }
 
   &__divider {
-    margin-top: 14px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 
     span:not(.icon) {
-      width: 30px;
+      width: 38px;
       height: 2px;
       display: inline-block;
       background: #d8b08a;
@@ -59,7 +68,7 @@
     }
 
     .icon {
-      font-size: 14px;
+      font-size: 16px;
       color: #c97d45;
       line-height: 1;
     }
@@ -69,59 +78,148 @@
 .coffee-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 28px;
 }
 
 .coffee-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 50px rgba(76, 21, 4, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease, border-color 0.35s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.02) 45%,
+      rgba(216, 176, 138, 0.08) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+      110deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.28) 48%,
+      transparent 100%
+    );
+    transform: skewX(-18deg);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.015);
+    border-color: rgba(216, 176, 138, 0.6);
+    box-shadow: 0 26px 70px rgba(76, 21, 4, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    &::after {
+      opacity: 1;
+      animation: coffeeCardShine 0.95s ease;
+    }
+
+    .coffee-card__image img {
+      transform: scale(1.06);
+    }
+
+    .coffee-card__title {
+      color: #6a240a;
+    }
+  }
+
   &__image {
+    position: relative;
     width: 100%;
-    aspect-ratio: 1.28 / 1;
+    aspect-ratio: 1.18 / 1;
     overflow: hidden;
     background: #ddd;
+    z-index: 0;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
     }
   }
 
   &__content {
-    padding-top: 12px;
+    position: relative;
+    z-index: 3;
+    padding: 22px 24px 26px;
   }
 
   &__title {
-    margin: 0 0 10px;
+    margin: 0 0 14px;
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    gap: 8px;
     flex-wrap: wrap;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.38rem;
     font-weight: 800;
     color: #4c1504;
     text-transform: uppercase;
     line-height: 1.2;
+    transition: color 0.3s ease;
   }
 
   &__number {
-    font-size: 20px;
+    font-size: 1.9rem;
     color: #c49a6c;
     line-height: 1;
   }
 
   &__text {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    line-height: 1.9;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.95;
     color: #220101;
+  }
+}
+
+@keyframes coffeeCardShine {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
   }
 }
 
 /* TABLET */
 @media (max-width: 991px) {
+  .coffee-section {
+    padding: 70px 20px 80px;
+    min-height: auto;
+    display: block;
+    background: #ffffff;
+  }
+
   .coffee-container {
     max-width: 760px;
   }
@@ -132,8 +230,81 @@
   }
 
   .coffee-heading {
+    margin-bottom: 42px;
+
+    &__top {
+      margin: 0 0 8px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
     &__title {
       font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    &__divider {
+      margin-top: 14px;
+      gap: 10px;
+
+      span:not(.icon) {
+        width: 30px;
+      }
+
+      .icon {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .coffee-card {
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      transform: none;
+      border-color: transparent;
+      box-shadow: none;
+
+      .coffee-card__image img {
+        transform: none;
+      }
+
+      .coffee-card__title {
+        color: #4c1504;
+      }
+    }
+
+    &__image {
+      aspect-ratio: 1.28 / 1;
+    }
+
+    &__content {
+      padding: 12px 0 0;
+    }
+
+    &__title {
+      margin: 0 0 10px;
+      gap: 6px;
+      font-size: 16px;
+    }
+
+    &__number {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.9;
     }
   }
 }
@@ -180,5 +351,15 @@
     &__text {
       font-size: 13px;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coffee-card,
+  .coffee-card::after,
+  .coffee-card__image img,
+  .coffee-card__title {
+    transition: none !important;
+    animation: none !important;
   }
 }
