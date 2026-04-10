@@ -1,8 +1,8 @@
 .menu-board {
   min-height: 100vh;
   padding: 48px 24px 64px;
-  background: #5b2e1f;
-  color: #f3dfc9;
+  background: #ffffff;
+  color: #4c1504;
 }
 
 .menu-board__inner {
@@ -24,7 +24,7 @@
   font-family: "Playfair Display", serif;
   font-size: clamp(3rem, 8vw, 5.6rem);
   line-height: 0.95;
-  color: #f1dfca;
+  color: #4c1504;
 }
 
 .menu-board__grid {
@@ -65,13 +65,13 @@
   margin-bottom: 14px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.15rem;
-  color: #f2e5d7;
+  color: #4c1504;
 }
 
 .menu-list li::after {
   content: "";
   order: 2;
-  border-bottom: 1px dotted rgba(232, 199, 167, 0.7);
+  border-bottom: 1px dotted #4c1504;
   transform: translateY(1px);
 }
 
@@ -81,7 +81,7 @@
 
 .menu-list li span:last-child {
   order: 3;
-  color: #d59c68;
+  color: 4c1504;
   font-weight: 700;
 }
 
@@ -89,7 +89,7 @@
   position: relative;
   width: min(100%, 430px);
   aspect-ratio: 1.45/1;
-  background: #c28b5d;
+  background: #4c1504;
   border-radius: 42% 58% 38% 62%/42% 34% 66% 58%;
   overflow: hidden;
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.24);
@@ -204,6 +204,4 @@
     width: 100%;
     max-width: 360px;
   }
-}
-
-/*# sourceMappingURL=menu.css.map */
+}/*# sourceMappingURL=menu.css.map */

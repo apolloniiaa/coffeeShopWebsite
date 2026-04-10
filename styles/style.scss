@@ -1,11 +1,11 @@
-@import './cards';
-@import './about';
-@import './contact';
-@import './map';
-@import './menu';
-@import './featured';
-@import './footer';
-@import './navbar';
+@use './cards';
+@use './about';
+@use './contact';
+
+@use './menu';
+@use './featured';
+@use './footer';
+@use './navbar';
 
 :root {
   --bg-1: #180a07;

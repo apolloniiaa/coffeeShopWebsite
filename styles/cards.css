@@ -1,6 +1,6 @@
 .coffee-section {
   padding: 70px 20px 80px;
-  background: #d8b08a;
+  background: #ffffff;
 }
 
 .coffee-container {
@@ -19,7 +19,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #c49a6c;
+  color: #4c1504;
   text-transform: uppercase;
 }
 .coffee-heading__title {
@@ -28,7 +28,7 @@
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #201501;
+  color: #4c1504;
   text-transform: uppercase;
 }
 .coffee-heading__divider {
@@ -81,7 +81,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 800;
-  color: #3a3a3a;
+  color: #4c1504;
   text-transform: uppercase;
   line-height: 1.2;
 }
@@ -95,7 +95,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 1.9;
-  color: #ffffff;
+  color: #220101;
 }
 
 /* TABLET */

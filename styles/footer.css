@@ -21,9 +21,10 @@
   align-items: center;
   gap: 10px;
   padding: 10px 18px;
-  background: #ceadae;
+  background: #e5c7a5;
   border-radius: 999px;
-  box-shadow: 0 10px 24px rgba(227, 52, 58, 0.25);
+  box-shadow: 0 10px 24px #e5c7a5;
+  margin-top: 20px;
 }
 
 .site-footer__social-link {
@@ -63,7 +64,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #ceadae;
+  color: #e5c7a5;
 }
 
 .site-footer__brand span {
@@ -99,7 +100,7 @@
 }
 
 .site-footer__nav a:hover {
-  color: #ceadae;
+  color: #e5c7a5;
 }
 
 .site-footer__contact {
@@ -122,7 +123,7 @@
 }
 
 .site-footer__contact-item:hover {
-  color: #ceadae;
+  color: #e5c7a5;
 }
 
 .site-footer__icon {
@@ -131,14 +132,14 @@
 }
 
 .site-footer__bottom {
-  background: #ceadae;
+  background: #e5c7a5;
   padding: 12px 16px;
   text-align: center;
 }
 
 .site-footer__bottom p {
   margin: 0;
-  color: #fff;
+  color: #2f0f03;
   font-family: "Montserrat", sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
@@ -196,6 +197,4 @@
     font-size: 0.68rem;
     line-height: 1.5;
   }
-}
-
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */

@@ -1,11 +1,11 @@
 .featured-drink {
   min-height: 100vh;
-  background: #050505;
   color: #fff;
   overflow: hidden;
   display: flex;
   align-items: center;
   padding: 60px 24px;
+  background-color: #200801;
 }
 
 .featured-drink__inner {
@@ -44,7 +44,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ff3c6a;
+  color: #c49a6c;
   position: relative;
   display: inline-block;
   padding-top: 14px;
@@ -68,7 +68,7 @@
   line-height: 1.02;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #c49a6c;
 }
 
 .featured-drink__text {

@@ -19,8 +19,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
-  /* felső hullám */
-  /* alsó hullám */
 }
 .about-coffee__bg {
   position: absolute;
@@ -37,7 +35,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: rgba(40, 20, 10, 0.4);
+  background: rgba(40, 20, 10, 0.87);
 }
 .about-coffee__content {
   position: relative;
@@ -76,6 +74,9 @@ body {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
 }
+.about-coffee {
+  /* felső hullám */
+}
 .about-coffee::before {
   content: "";
   position: absolute;
@@ -83,10 +84,13 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: #d8b08a;
-  border-bottom-left-radius: 60% 100%;
-  border-bottom-right-radius: 40% 100%;
+  background: white;
+  border-bottom-left-radius: 40% 100%;
+  border-bottom-right-radius: 50% 100%;
   z-index: 4;
+}
+.about-coffee {
+  /* alsó hullám */
 }
 .about-coffee::after {
   content: "";
@@ -95,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: #d8b08a;
+  background: white;
   border-top-left-radius: 40% 100%;
   border-top-right-radius: 60% 100%;
   z-index: 4;
@@ -124,6 +128,4 @@ body {
   .about-coffee__text {
     font-size: 0.95rem;
   }
-}
-
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */
