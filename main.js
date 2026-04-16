@@ -101,7 +101,7 @@ function setupContactForm() {
   }
 
   emailjs.init({
-    publicKey: 'YOUR_PUBLIC_KEY',
+    publicKey: '82mo0KnGwLQaIDDyr',
   });
 
   form.addEventListener('submit', async (event) => {
@@ -115,7 +115,7 @@ function setupContactForm() {
     button.classList.add('is-loading');
 
     try {
-      await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
+      await emailjs.sendForm('service_jnf6fid', 'template_9i5q9wc', form);
 
       messageBox.textContent = 'Your message has been sent successfully.';
       messageBox.classList.add('is-success');
@@ -130,6 +130,10 @@ function setupContactForm() {
     }
   });
 }
+
+setupContactForm();
+
+/////////////////////////////////////
 
 function setupSideMenu() {
   const toggle = document.getElementById('nav-toggle');
