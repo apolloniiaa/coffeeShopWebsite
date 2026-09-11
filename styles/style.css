@@ -306,8 +306,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 120px 40px;
-  /* felső hullám */
-  /* alsó hullám */
 }
 .about-coffee__bg {
   position: absolute;
@@ -384,6 +382,9 @@ body {
   font-size: 1.14rem;
   color: rgba(255, 255, 255, 0.9);
 }
+.about-coffee {
+  /* felső hullám */
+}
 .about-coffee::before {
   content: "";
   position: absolute;
@@ -395,6 +396,9 @@ body {
   border-bottom-left-radius: 40% 100%;
   border-bottom-right-radius: 50% 100%;
   z-index: 4;
+}
+.about-coffee {
+  /* alsó hullám */
 }
 .about-coffee::after {
   content: "";
@@ -2367,6 +2371,4 @@ img {
   .hero__eyebrow {
     padding-bottom: 1.5rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
